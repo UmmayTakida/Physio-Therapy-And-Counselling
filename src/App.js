@@ -6,9 +6,12 @@ import Home from './pages/Home/Home/Home';
 import Login from './pages/Login/Login/Login';
 import AuthProvider from './contexts/AuthProvider';
 import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
-import GetAppoinment from './pages/GetAppoinment/GetAppoinment';
 import Register from './pages/Login/Register/Register';
 import Counseling from './pages/Counseling/Counseling';
+import ServiceDetails from './pages/Home/ServiceDetails/ServiceDetails';
+import Footer from './pages/footer/Footer';
+import GetAppoinment from './pages/getAppoinment/GetAppoinment'
+import NotFound from './pages/notFound/NotFound';
 
 
 
@@ -31,17 +34,25 @@ function App() {
             <Route path="/register">
               <Register></Register>
             </Route>
-            <PrivateRoute path="/getappoinment/:serviceId">
-              <GetAppoinment></GetAppoinment>
+            <PrivateRoute path="/serviceDetails/:serviceId">
+              <ServiceDetails></ServiceDetails>
 
             </PrivateRoute>
             <PrivateRoute path="/counseling">
               <Counseling></Counseling>
 
             </PrivateRoute>
+            <PrivateRoute path="/appoinment">
+              <GetAppoinment></GetAppoinment>
+
+            </PrivateRoute>
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
 
 
           </Switch>
+          <Footer></Footer>
         </Router>
       </AuthProvider>
 

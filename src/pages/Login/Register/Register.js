@@ -1,7 +1,9 @@
 import React from 'react';
 import { Col, Container, Form, Row } from 'react-bootstrap';
+import useAuth from '../../../hooks/useAuth';
 
 const Register = () => {
+    const { emailInput, passInput, registerButton } = useAuth();
     return (
         <Container>
             <Form >
@@ -11,7 +13,7 @@ const Register = () => {
                         Email
                     </Form.Label>
                     <Col sm={10}>
-                        <Form.Control type="email" placeholder="Email" />
+                        <Form.Control onBlur={emailInput} type="email" placeholder="Email" />
                     </Col>
                 </Form.Group>
 
@@ -20,7 +22,7 @@ const Register = () => {
                         Password
                     </Form.Label>
                     <Col sm={10}>
-                        <Form.Control type="password" placeholder="Password" />
+                        <Form.Control onBlur={passInput} type="password" placeholder="Password" />
                     </Col>
                 </Form.Group>
 
@@ -32,7 +34,7 @@ const Register = () => {
 
                 <Form.Group as={Row} className="mb-3">
                     <Col sm={{ span: 10, offset: 2 }}>
-                        <button type="submit">Sign in</button>
+                        <button onClick={registerButton} type="button">Sign up</button>
                     </Col>
                 </Form.Group>
             </Form>

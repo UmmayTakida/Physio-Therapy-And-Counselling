@@ -6,7 +6,6 @@ import AboutUs from './Aboutus/AboutUs';
 const Home = () => {
     return (
         <div>
-            <h2>this is Home page</h2>
 
             <Bnner></Bnner>
             <Services></Services>
