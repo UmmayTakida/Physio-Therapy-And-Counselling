@@ -35,7 +35,7 @@ const Login = () => {
                 </Form.Group>
                 <Form.Group as={Row} className="mb-3">
                     <Col sm={{ span: 10, offset: 2 }}>
-                        <button onClick={existingUser} type="button">login</button>
+                        <button className="btn btn-primary btn-lg" onClick={existingUser} type="button">login</button>
                     </Col>
                 </Form.Group>
 
@@ -46,10 +46,11 @@ const Login = () => {
                         <Link to="/register">Create Account</Link>
                     </Col>
                 </Form.Group>
+                <div><h1>--Or</h1></div>
 
                 <Form.Group as={Row} className="mb-3">
                     <Col sm={{ span: 10, offset: 2 }}>
-                        <button onClick={signInUsingGoogle} type="button"> Google Sign in</button>
+                        <button className="btn btn-primary btn-lg" onClick={signInUsingGoogle} type="button"> Google Sign in</button>
                     </Col>
                 </Form.Group>
             </Form>

@@ -6,7 +6,7 @@ import './about.css'
 const AboutUs = () => {
     return (
         <Container className="mb-5">
-            <h2 className="my-5 text-center fs-1 fw-2 mb-5 header-color">About us:</h2>
+            <h2 className="my-5 text-center fs-1 fw-2 mb-5 header-color text-dark">About Us</h2>
             <div className="row row-cols-2 mt-5">
                 <div className="col">
                     <h1>Say goodbye to the Problems and hello to freedom</h1>

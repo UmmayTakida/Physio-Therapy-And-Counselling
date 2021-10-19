@@ -34,7 +34,7 @@ const Register = () => {
 
                 <Form.Group as={Row} className="mb-3">
                     <Col sm={{ span: 10, offset: 2 }}>
-                        <button onClick={registerButton} type="button">Sign up</button>
+                        <button className="btn btn-primary btn-lg" onClick={registerButton} type="button">Sign up</button>
                     </Col>
                 </Form.Group>
             </Form>

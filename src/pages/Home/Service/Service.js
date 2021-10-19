@@ -22,7 +22,7 @@ const Service = ({ service }) => {
                         <Card.Text >
                             <p>{details.slice(0, 250)}</p>
                             <Link to={`/serviceDetails/${id}`}>
-                                <button>
+                                <button className="btn btn-primary btn-lg">
                                     More details
                                 </button>
                             </Link>
