@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth'
 
 const Login = () => {
-    const { emailInput, pasInput, signInUsingGoogle, existingUser } = useAuth();
+    const { emailInput, pasInput, signInUsingGoogle, existingUser, error } = useAuth();
     return (
 
 
@@ -19,6 +19,10 @@ const Login = () => {
                     <Col sm={10}>
                         <Form.Control onBlur={emailInput}
                             type="email" placeholder="Email" />
+                        <Form.Text className="text-muted">
+                            <p>{error}</p>
+                            We'll never share your email with anyone else.
+                        </Form.Text>
                     </Col>
 
                 </Form.Group>

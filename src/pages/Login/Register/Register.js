@@ -3,7 +3,7 @@ import { Col, Container, Form, Row } from 'react-bootstrap';
 import useAuth from '../../../hooks/useAuth';
 
 const Register = () => {
-    const { emailInput, passInput, registerButton } = useAuth();
+    const { emailInput, passInput, registerButton, regError } = useAuth();
     return (
         <Container>
             <Form >
@@ -14,6 +14,10 @@ const Register = () => {
                     </Form.Label>
                     <Col sm={10}>
                         <Form.Control onBlur={emailInput} type="email" placeholder="Email" />
+                        <Form.Text className="text-muted" >
+                            <p>{regError}</p>
+                            We'll never share your email with anyone else.
+                        </Form.Text>
                     </Col>
                 </Form.Group>
 
