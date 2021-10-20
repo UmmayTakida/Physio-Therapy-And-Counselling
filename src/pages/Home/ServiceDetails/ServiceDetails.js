@@ -1,22 +1,51 @@
 import React, { useEffect, useState } from 'react';
+import { Card, Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router';
+import "./servicedetails.css"
 
 const ServiceDetails = () => {
-    const { serviceId } = useParams();
-    const [service, setService] = useState({})
+    let { id } = useParams();
+    const [detailsService, setServiceDetails] = useState([]);
+    const [singleService, setSingleService] = useState({});
+
     useEffect(() => {
-        const url = './data.json'
-        fetch(url)
+        fetch("/serviceDetails.json")
             .then(res => res.json())
-            .then(data => setService(data))
+            .then(data => setServiceDetails(data.service))
+
     }, [])
+    useEffect(() => {
+        const singleServiceFound = detailsService.find((sr) => sr?.id == id);
+        setSingleService(singleServiceFound);
+        console.log(setSingleService)
+
+    }, [detailsService])
     return (
+
         <div>
-            <h3>friends details:{serviceId}</h3>
-            
-               
-}
-        </div >
+
+
+            <Container className="mb-5 service-details">
+                <h2 className="text-center my-5">Popular Theray of Number: <strong className="text-primary">{id}</strong></h2>
+                <Row>
+                    <Col md={4}>
+                        <Card className="mb-3">
+                            <Card.Img variant="top" src={singleService?.img} className="service-image" />
+                        </Card>
+                    </Col>
+                    <Col md={5}>
+                        <Card>
+                            <Card.Body>
+                                <Card.Title> <b>{singleService?.name}</b> </Card.Title>
+                                <Card.Text>
+                                    <p>{singleService?.details}</p>
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+            </Container>
+        </div>
     );
 };
 

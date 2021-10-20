@@ -34,7 +34,7 @@ function App() {
             <Route path="/register">
               <Register></Register>
             </Route>
-            <PrivateRoute path="/serviceDetails/:serviceId">
+            <PrivateRoute path="/serviceDetails/:id">
               <ServiceDetails></ServiceDetails>
 
             </PrivateRoute>
