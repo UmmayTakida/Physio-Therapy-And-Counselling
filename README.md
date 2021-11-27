@@ -6,10 +6,13 @@
 
 ## Hosting And Deploy in Firsebase.Google.com, the live site link is ['https://physio-therapy-counseling.web.app/']
 
+## Firebase Authentication
+## deploy by firebase
+## For the site responsive using react bootstrap,plain css.
 ## in the projects  user can create account through in register page.
-  ## Existing user can login with their  mail address and passwor or Google account
-  ## there are two Private Route where user have to login tyo see the details
+## Existing user can login with their  mail address and password or Google account
+## there are two Private Route where user have to login to see the details
+## user can take appoinment and counseling after login in
 
-  ## user can take appoinment and counseling in online 
 
 
